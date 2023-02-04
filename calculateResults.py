@@ -7,15 +7,14 @@ correct_numbers = numbers_for_today();
 start_time_for_ticket_generation = time.time();
 ticket_array = simulate_tickets(my_ticket_amount);
 ticket_array.tolist();
+
 print("Time elapsed for row generation: ", time.time() - start_time_for_ticket_generation
 , "seconds");
 
 
 print("Correct Lotto numbers are: ");
 print(correct_numbers);
-start_time = time.time();
-winning_categories = [4,5,6,7]
-
+start_time_for_win_iteration = time.time();
 
 def correct_in_categories():
 	four_correct = 0;
@@ -46,4 +45,4 @@ print("5 correct results: ",wins[1]);
 print("6 correct results: ",wins[2]);
 print("7 correct results: ",wins[3]);
 
-print("Time elapsed for result check: ", time.time() - start_time, "seconds");
+print("Time elapsed for result check: ", time.time() - start_time_for_win_iteration, "seconds");
